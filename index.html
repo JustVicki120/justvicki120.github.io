@@ -4,7 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Just Vicki | Welcome!</title>
+/* Delicate botanical decorations */
 
+main {
+  position: relative;
+  isolation: isolate;
+}
+
+main::before,
+main::after {
+  content: "";
+  position: absolute;
+  width: 115px;
+  height: 310px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: -1;
+}
+
+main::before {
+  top: 40px;
+  left: -135px;
+  background-image: url("wildflowers-left.svg");
+}
+
+main::after {
+  bottom: 30px;
+  right: -135px;
+  background-image: url("wildflowers-right.svg");
+}
+
+@media (max-width: 1100px) {
+  main::before,
+  main::after {
+    width: 75px;
+    opacity: 0.2;
+  }
+
+  main::before {
+    left: -75px;
+  }
+
+  main::after {
+    right: -75px;
+  }
+}  
   <style>
     * {
       box-sizing: border-box;
