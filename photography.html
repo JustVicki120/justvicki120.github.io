@@ -1,156 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photography | JustVicki</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography | JustVicki</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      background: #172238;
-      color: #f5f0e8;
-      font-family: Georgia, serif;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    header {
-      text-align: center;
-      padding: 65px 20px 35px;
-    }
+body {
+  margin: 0;
+  background: #172238;
+  color: #f5f0e8;
+  font-family: Georgia, serif;
+}
 
-    h1 {
-      font-size: clamp(38px, 5vw, 64px);
-      font-weight: normal;
-      margin: 0;
-      letter-spacing: 2px;
-    }
+/* PAGE HEADER */
 
-    .subtitle {
-      font-style: italic;
-      color: #c4cad6;
-      margin-top: 15px;
-      font-size: 17px;
-    }
+header {
+  text-align: center;
+  padding: 65px 20px 35px;
+  background: #172238;
+}
 
-    .gallery {
-      max-width: 1250px;
-      margin: 0 auto;
-      padding: 30px 35px 100px;
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 65px 35px;
-      align-items: center;
-    }
+h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: 2px;
+}
 
-    figure {
-      margin: 0;
-      text-align: center;
-    }
+.subtitle {
+  font-style: italic;
+  color: #c4cad6;
+  margin-top: 15px;
+  font-size: 17px;
+}
 
-    figure img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 3px;
-      cursor: zoom-in;
-      box-shadow: 0 12px 35px rgba(0,0,0,.35);
-      transition: transform .3s ease;
-    }
+/* PHOTOGRAPHY SECTIONS */
 
-    figure img:hover {
-      transform: scale(1.015);
-    }
+.photo-section {
+  width: 100%;
+  padding: 65px 30px;
+  text-align: center;
+}
 
-    figcaption {
-      margin-top: 17px;
-      color: #d8dce5;
-      font-size: 15px;
-      line-height: 1.6;
-    }
+.photo-section figure {
+  margin: 0 auto;
+}
 
-    .storm {
-      grid-column: 1 / 13;
-    }
+.photo-section img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  cursor: zoom-in;
+  box-shadow: 0 12px 35px rgba(0,0,0,.28);
+  transition: transform .3s ease;
+}
 
-    .plantation {
-      grid-column: 2 / 12;
-    }
+.photo-section img:hover {
+  transform: scale(1.012);
+}
 
-    .pippin {
-      grid-column: 1 / 7;
-    }
+figcaption {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f8f5ef;
+}
 
-    .tuki {
-      grid-column: 8 / 13;
-    }
+/* COLOR TRANSITIONS */
 
-    .back {
-      display: block;
-      text-align: center;
-      padding: 25px;
-      color: #f5f0e8;
-      text-decoration: none;
-      font-size: 16px;
-    }
+.storm-section {
+  background: linear-gradient(
+    to bottom,
+    #172238 0%,
+    #172238 75%,
+    #92765D 100%
+  );
+}
 
-    .back:hover {
-      text-decoration: underline;
-    }
+.plantation-section {
+  background: linear-gradient(
+    to bottom,
+    #92765D 0%,
+    #92765D 75%,
+    #667B91 100%
+  );
+}
 
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(5,9,18,.96);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      padding: 45px;
-      cursor: zoom-out;
-    }
+.pippin-section {
+  background: linear-gradient(
+    to bottom,
+    #667B91 0%,
+    #667B91 75%,
+    #85817D 100%
+  );
+}
 
-    .lightbox.open {
-      display: flex;
-    }
+.tuki-section {
+  background: #85817D;
+}
 
-    .lightbox img {
-      max-width: 100%;
-      max-height: 90vh;
-      object-fit: contain;
-    }
+/* ASYMMETRICAL PHOTO SIZES */
 
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 38px;
-      color: white;
-      cursor: pointer;
-    }
+.storm-section figure {
+  max-width: 1150px;
+}
 
-    @media (max-width: 700px) {
-      header {
-        padding: 45px 15px 20px;
-      }
+.plantation-section figure {
+  max-width: 950px;
+  margin-left: 12%;
+}
 
-      .gallery {
-        display: block;
-        padding: 25px 20px 60px;
-      }
+.pippin-section figure {
+  max-width: 620px;
+  margin-left: 8%;
+}
 
-      figure {
-        margin-bottom: 45px;
-      }
+.tuki-section figure {
+  max-width: 570px;
+  margin-right: 8%;
+}
 
-      .lightbox {
-        padding: 15px;
-      }
-    }
-  </style>
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  background: #85817D;
+}
+
+.back {
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* FULL-SCREEN PHOTO VIEWER */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(5,9,18,.96);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 45px;
+  cursor: zoom-out;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 38px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  header {
+    padding: 45px 15px 20px;
+  }
+
+  .photo-section {
+    padding: 45px 20px;
+  }
+
+  .photo-section figure {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .lightbox {
+    padding: 15px;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -160,37 +211,45 @@
   <p class="subtitle">A few moments through my eyes</p>
 </header>
 
-<main class="gallery">
+<main>
 
-  <figure class="storm">
+<section class="photo-section storm-section">
+  <figure>
     <img src="photography/IMG_0336.JPG"
          alt="Dramatic storm clouds over a winding road in Colorado">
     <figcaption>Colorado Storm</figcaption>
   </figure>
+</section>
 
-  <figure class="plantation">
+<section class="photo-section plantation-section">
+  <figure>
     <img src="photography/IMG_0491.jpeg"
          alt="Interior of the former slave quarters at Laura Plantation">
-    <figcaption>
-      Laura Plantation — Louisiana
-    </figcaption>
+    <figcaption>Laura Plantation — Louisiana</figcaption>
   </figure>
+</section>
 
-  <figure class="pippin">
+<section class="photo-section pippin-section">
+  <figure>
     <img src="photography/IMG_0327.JPG"
          alt="Pippin the green-cheek conure exploring a food jar">
     <figcaption>Pippin — My Heart Bird ❤️</figcaption>
   </figure>
+</section>
 
-  <figure class="tuki">
+<section class="photo-section tuki-section">
+  <figure>
     <img src="photography/IMG_3911.JPG"
          alt="Tuki the parrot playing with hemostats">
     <figcaption>Tuki — Ruler of the Roost</figcaption>
   </figure>
+</section>
 
 </main>
 
-<a class="back" href="index.html">← Back to JustVicki</a>
+<footer>
+  <a class="back" href="index.html">← Back to JustVicki</a>
+</footer>
 
 <div class="lightbox" id="lightbox"
      role="dialog"
@@ -201,27 +260,27 @@
 </div>
 
 <script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImage = document.getElementById("lightboxImage");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
 
-  document.querySelectorAll(".gallery img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightboxImage.src = img.src;
-      lightboxImage.alt = img.alt;
-      lightbox.classList.add("open");
-    });
+document.querySelectorAll(".photo-section img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    lightbox.classList.add("open");
   });
+});
 
-  function closeLightbox() {
-    lightbox.classList.remove("open");
-    lightboxImage.src = "";
-  }
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightboxImage.src = "";
+}
 
-  lightbox.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", closeLightbox);
 
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeLightbox();
-  });
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeLightbox();
+});
 </script>
 
 </body>
