@@ -4,204 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Just Vicki | Welcome!</title>
-<style>
-  /* Delicate botanical decorations */
-
-main {
-  position: relative;
-  isolation: isolate;
-}
-
-main::before,
-main::after {
-  content: "";
-  position: absolute;
-  width: 115px;
-  height: 310px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  opacity: 0.32;
-  pointer-events: none;
-  z-index: -1;
-}
-
-main::before {
-  top: 40px;
-  left: -135px;
-  background-image: url("wildflowers-left.svg");
-}
-
-main::after {
-  bottom: 30px;
-  right: -135px;
-  background-image: url("wildflowers-right.svg");
-}
-
-@media (max-width: 1100px) {
-  main::before,
-  main::after {
-    width: 75px;
-    opacity: 0.2;
-  }
-
-  main::before {
-    left: -75px;
-  }
-
-  main::after {
-    right: -75px;
-  }
-}  
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      color: #25334a;
-      background: #faf8f5;
-      line-height: 1.8;
-    }
-
-    header {
-      background: #183b83;
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    header p {
-      font-style: italic;
-      margin: 12px 0 0;
-    }
-
-    nav {
-      text-align: center;
-      padding: 15px;
-      background: #edf1f8;
-    }
-
-    nav a {
-      color: #183b83;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 35px 25px;
-    }
-
-    section {
-      margin-bottom: 55px;
-    }
-
-    h2 {
-      color: #183b83;
-      font-weight: normal;
-      border-bottom: 1px solid #c7d3e8;
-      padding-bottom: 10px;
-    }
-
-    .contact {
-      background: #edf1f8;
-      border-radius: 15px;
-      padding: 25px;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-.artistic-header {
-  background: #faf8f5;
-  padding: 0;
-  text-align: center;
-}
-
-.website-banner {
-  display: block;
-  width: 100%;
-  max-width: none
-  height: auto;
-  margin: 0 auto;
-}    
-  </style>
+  <meta name="description" content="Vicki Hosman: people, ideas, connections and opportunities. Home of Just Vicki, LLC, maker of the ¡see it new! photography apps and Waist Time.">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header class="artistic-header">
-  <img
-src="JustVicki website header wide (1600 x 600 px).png"  
-    alt="Vicki Hosman - Artistic Elegance"
-    class="website-banner"
-  >
-</header>
+    <img src="JustVicki website header wide (1600 x 600 px).png"
+         alt="Vicki Hosman: people, ideas, connections, opportunities"
+         class="website-banner">
+  </header>
 
   <nav>
-  <a href="#about">About Me</a>
-  <a href="photography/">Photography</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="photography/">Photography</a>
+    <a href="business.html">Just Vicki, LLC</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <main>
 
-    <section id="about">
-      <h2>A Little About Me</h2>
+    <section id="welcome">
+      <h2>Welcome!</h2>
 
-      <p>Hi! I'm Vicki! 💙</p>
+      <p class="lead">Hi! I'm Vicki! 💙</p>
 
       <p>
-        I'm a wife, mom, grandmother, animal lover,
-        and lifelong learner. I'm a former labor and
-        delivery nurse who traded hospital hallways
-        for local highways, and these days, you'll
-        often find me behind the wheel, meeting
-        interesting people and collecting stories
-        along the way.
+        I'm a wife, mom, grandmother, animal lover, and lifelong learner.
+        I'm a former labor and delivery nurse who traded hospital hallways
+        for local highways, and these days you'll often find me behind the
+        wheel, meeting interesting people and collecting stories along the way.
       </p>
 
       <p>
-        I've always been curious about the world
-        around me. I love technology, creating and
-        editing videos, dreaming up new projects,
-        and figuring out how to make those ideas
-        come to life. My latest adventure?
-        Learning to build my own app!
+        I've always been curious about the world around me, and lately that
+        curiosity has turned into something new: I build apps. What started
+        as "I wonder if I could…" became Just Vicki, LLC, my little company
+        that makes friendly, thoughtful apps for iPhone, iPad and, soon, Android.
       </p>
 
       <p>
-        I'm happiest when I'm learning something
-        new, making something beautiful, spending
-        time with the people I love, or enjoying
-        the company of any horse or my beloved dogs and parrots.
+        <strong>Welcome to my little corner of the internet! 💙</strong>
       </p>
+    </section>
 
-      <p>
-        I believe life is full of interesting
-        people, unexpected opportunities, and
-        wonderful connections just waiting to happen.
-      </p>
+    <section id="explore">
+      <h2>Come On In</h2>
 
+      <div class="doors">
+        <a class="door" href="about.html">
+          <h3>About Me</h3>
+          <p>Family, horses, dogs and parrots, photography, and the things that make me happiest.</p>
+          <span class="more">Get to know me →</span>
+        </a>
+
+        <a class="door" href="business.html">
+          <h3>Just Vicki, LLC</h3>
+          <p>My app company: ¡see it new!, KIDS ¡see it new!, and Waist Time.</p>
+          <span class="more">See the apps →</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="photography">
+      <h2>Through My Lens</h2>
       <p>
-        <strong>
-          And that's why I'm here. Welcome to my
-          little corner of the internet! 💙
-        </strong>
+        From West Texas sunrises to a bee in the garden, I love noticing the
+        small, beautiful moments most people drive right past.
+        <a href="photography/">Take a look at my photography →</a>
       </p>
     </section>
 
@@ -209,25 +81,23 @@ src="JustVicki website header wide (1600 x 600 px).png"
       <h2>Let's Stay in Touch!</h2>
 
       <div class="contact">
-        <p>
-          Have a question, an idea, or just want
-          to say hello?
+        <p>Have a question, an idea, or just want to say hello? I'd love to hear from you!</p>
+        <p>📧 <a href="mailto:hello@justvicki.com">hello@justvicki.com</a></p>
+        <p style="font-size:.95rem;margin-bottom:0">
+          For business and app questions:
+          <a href="mailto:info@justvicki.com">info@justvicki.com</a>
         </p>
-
-        <p>I'd love to hear from you!</p>
-
-        <p>
-  📧 <a href="mailto:hello@justvicki.com">
-    hello@justvicki.com
-  </a>
-</p>
       </div>
     </section>
 
   </main>
 
   <footer>
-    © 2026 Just Vicki
+    © 2026 Just Vicki, LLC
+    <br>
+    <a href="about.html">About Me</a>
+    <a href="photography/">Photography</a>
+    <a href="business.html">Just Vicki, LLC</a>
   </footer>
 
 </body>

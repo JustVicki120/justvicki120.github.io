@@ -1,0 +1,154 @@
+/* Shared styles for JustVicki.com — navy, ivory, wildflowers */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #25334a;
+  background: #faf8f5;
+  line-height: 1.8;
+}
+
+a { color: #183b83; }
+
+/* Banner */
+.artistic-header { background: #faf8f5; padding: 0; text-align: center; }
+.website-banner { display: block; width: 100%; height: auto; margin: 0 auto; }
+
+/* Page title band, for inner pages */
+.page-title {
+  text-align: center;
+  padding: 45px 20px 10px;
+}
+.page-title h1 {
+  color: #183b83;
+  font-weight: normal;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin: 0;
+  letter-spacing: 1px;
+}
+.page-title p {
+  font-style: italic;
+  color: #5b6b82;
+  margin: 8px 0 0;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  padding: 14px 10px;
+  background: #edf1f8;
+}
+nav a {
+  color: #183b83;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 2px 0;
+}
+nav a:hover { text-decoration: underline; }
+nav a[aria-current="page"] { border-bottom: 2px solid #183b83; }
+
+/* Main column with delicate wildflower decorations */
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 35px 25px;
+  position: relative;
+  isolation: isolate;
+}
+main::before,
+main::after {
+  content: "";
+  position: absolute;
+  width: 115px;
+  height: 310px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: -1;
+}
+main::before { top: 40px; left: -135px; background-image: url("wildflowers-left.svg"); }
+main::after { bottom: 30px; right: -135px; background-image: url("wildflowers-right.svg"); }
+@media (max-width: 1100px) {
+  main::before, main::after { width: 75px; opacity: 0.2; }
+  main::before { left: -75px; }
+  main::after { right: -75px; }
+}
+@media (max-width: 700px) {
+  main::before, main::after { display: none; }
+}
+html, body { overflow-x: hidden; }
+
+section { margin-bottom: 55px; }
+
+h2 {
+  color: #183b83;
+  font-weight: normal;
+  border-bottom: 1px solid #c7d3e8;
+  padding-bottom: 10px;
+}
+h3 { color: #183b83; font-weight: normal; margin: 0 0 4px; font-size: 1.35rem; }
+
+.lead { font-size: 1.15rem; }
+
+/* Two "doors" on the home page */
+.doors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.door {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #dbe3f0;
+  border-radius: 15px;
+  padding: 24px 24px 20px;
+  text-decoration: none;
+  color: #25334a;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.door:hover { box-shadow: 0 8px 24px rgba(24, 59, 131, .12); transform: translateY(-2px); }
+.door p { margin: 6px 0 10px; }
+.door .more { color: #183b83; font-weight: bold; }
+@media (max-width: 640px) { .doors { grid-template-columns: 1fr; } }
+
+/* App cards on the business page */
+.app {
+  background: #ffffff;
+  border: 1px solid #dbe3f0;
+  border-radius: 15px;
+  padding: 24px;
+  margin-bottom: 22px;
+}
+.app .status {
+  display: inline-block;
+  font-size: .85rem;
+  color: #183b83;
+  background: #edf1f8;
+  border-radius: 20px;
+  padding: 1px 12px;
+  margin-bottom: 8px;
+}
+.app p { margin: 8px 0; }
+.app .links a { margin-right: 18px; white-space: nowrap; }
+
+/* Contact box */
+.contact {
+  background: #edf1f8;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 20px 35px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+footer a { color: #64748b; margin: 0 8px; }
